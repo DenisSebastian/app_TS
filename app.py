@@ -2,18 +2,17 @@ import streamlit as st
 import pandas as pd
 import os
 
+wd = os.getcwd()
+file_name = "disturbed_df.csv"
+files_csv = "data/csv"
+fullname = os.path.join(wd,files_csv , file_name)
+
 st.title("NDVI")
 st.subheader("Visualización de Inicial datos")
 
 st.write("""
 Serie de tiempo de NDVI
 """)
-
-wd = os.getcwd()
-file_name = "disturbed_df.csv"
-
-fullname = os.path.join(wd, file_name)
-
 
 df = pd.read_csv(fullname)
 df = df.set_index("date")
