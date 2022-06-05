@@ -6,8 +6,9 @@ Corresponde a registros del promedio NDVI (Landsat 8) de parcelas bosque esclero
 
 <center>
 
-![equation](http://latex.codecogs.com/gif.latex?NDVI=\frac{NIR-RED}{NIR+RED})
+![equation](http://latex.codecogs.com/gif.latex?{NDVI=\frac{NIR-RED}{NIR+RED}#gh-dark-mode-only)
 
 </center>
+
 
 ![](images/descp_ndvi.jpeg)
