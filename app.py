@@ -83,7 +83,7 @@ st.plotly_chart(fig, use_container_width=False)
 
 # Descipción de la APP
 
-st.subheader("Descipción:")
+st.markdown("##### Descipción:")
 st.write("Corresponde a registros del promedio NDVI (Landsat 8) de parcelas bosque esclerofilo de la zona Central de Chile, por un periodo desde 2000-01-03 a 2022-04-29")
 
 st.latex(r'''
