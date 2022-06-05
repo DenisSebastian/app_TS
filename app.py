@@ -48,8 +48,9 @@ else:
 width = 750
 height = 550
 
-fig = px.line(newdf, x='date', y='ndvi', title=title_plot,
-        width = width, height= height)
+fig = px.line(newdf, x='date', y='ndvi', title=title_plot
+        #,width = width, height= height
+)
 
 fig.update_traces(line_color='#3690c0', line_width=2)
 fig.update_layout(
