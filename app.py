@@ -4,7 +4,7 @@ import os
 import plotly.express as px
 
 st.title("Series de NDVI")
-st.subheader("Visualización inicial datos de prueba")
+st.markdown("##### Visualización inicial datos de prueba")
 
 
 col1, col2 = st.columns(2)
@@ -50,6 +50,11 @@ height = 550
 
 fig = px.line(newdf, x='date', y='ndvi', title=title_plot,
         width = width, height= height)
+
+fig.update_traces(line_color='#3690c0', line_width=2)
+fig.update_layout(
+    plot_bgcolor='white'
+)
 
 fig.update_xaxes(rangeslider_visible=True,
      rangeselector=dict(
