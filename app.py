@@ -58,10 +58,9 @@ df_serie = df.loc[(df.serie == serie_filter)]
 
 # Generación de Visualización
 width = 750
-height = 550
+height = 500
 
-fig = px.line(df_serie, x='date', y=colname, title=title_plot
-        #,width = width, height= height
+fig = px.line(df_serie, x='date', y=colname, title=title_plot,width = width, height= height
 )
 
 fig.update_traces(line_color='#02818a', line_width=1)
@@ -91,5 +90,5 @@ st.latex(r'''
 NDVI = \frac{NIR-RED}{NIR+RED}
      ''')
 
-st.image("images/descp_ndvi.jpeg")
+#st.image("images/descp_ndvi.jpeg")
 st.markdown("**Autor:** [denis.berroeta@uai.cl](denis.berroeta@uai.cl)")
