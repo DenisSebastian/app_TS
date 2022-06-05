@@ -15,12 +15,30 @@ with col1:
         label = "Seleccione Base",
         options = ["disturbed", "non_disturbed"])
 
+
+# checkbox para remove NA values de la serie
+data_radio = st.radio(
+     label = "Seleccione tipo de datos",
+     options = ('Raw (con NAs)', 'NAs Interpolados'),
+     horizontal =True)
+
+
+
+if data_radio == 'NAs Interpolados':
+    base_select = base_select+"_i"
+    colname = "ndvi_interpolated"
+else:
+    colname = "ndvi"
+
+
+
 # Generación path
 wd = os.getcwd()
 file_name = str(base_select + "_df.csv")
 files_csv = "data/csv"
 fullname = os.path.join(wd,files_csv , file_name)
 
+os.path.exists(fullname)
 
 # Lectura de Base
 df = pd.read_csv(fullname)
@@ -37,18 +55,12 @@ df_serie = df.loc[(df.serie == serie_filter)]
 
 
 
-# checkbox para remove NA values de la serie
-checkbox_na = st.checkbox("Remove NA", value = True)
-if checkbox_na:
-    newdf = df_serie.dropna()
-else:
-    newdf = df_serie
 
 # Generación de Visualización
 width = 750
 height = 550
 
-fig = px.line(newdf, x='date', y='ndvi', title=title_plot
+fig = px.line(df_serie, x='date', y=colname, title=title_plot
         #,width = width, height= height
 )
 
