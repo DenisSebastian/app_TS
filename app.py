@@ -53,9 +53,9 @@ fig = px.line(newdf, x='date', y='ndvi', title=title_plot
 )
 
 fig.update_traces(line_color='#02818a', line_width=1)
-fig.update_layout(
-    plot_bgcolor='white'
-)
+#fig.update_layout(
+#    plot_bgcolor='white'
+#)
 
 fig.update_xaxes(rangeslider_visible=True,
      rangeselector=dict(
