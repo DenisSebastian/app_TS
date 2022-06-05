@@ -52,7 +52,7 @@ fig = px.line(newdf, x='date', y='ndvi', title=title_plot
         #,width = width, height= height
 )
 
-fig.update_traces(line_color='#3690c0', line_width=2)
+fig.update_traces(line_color='#02818a', line_width=1)
 fig.update_layout(
     plot_bgcolor='white'
 )
